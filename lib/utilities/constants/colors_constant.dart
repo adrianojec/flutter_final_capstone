@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const blackTextColor = Color(0xFF000000);
-const darkBlueTextColor = Color(0xFF191D26);
+final darkBlueTextColor = const Color(0xFF191D26).withOpacity(0.64);
 const skyBlueTextColor = Color(0xFF00A4EA);
 const greyTextColor = Color(0xFFB9B9B9);
 const lightGreyTextColor = Color(0xFFE0E0E0);

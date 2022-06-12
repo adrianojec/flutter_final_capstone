@@ -1,9 +1,9 @@
-const String iconPath = 'assets/icons';
-const String logoPath = 'assets/logo';
-
 const String roboto = 'Roboto';
 const String allertaStencil = 'Allerta Stencil';
 const String mulish = 'Mulish';
+
+const String logoPath = 'assets/logo';
+const String appLogo = '$logoPath/logo.svg';
 
 const String appTitle = 'Flutter FieldPass';
 const String flutterFieldPass = 'Flutter FieldPass';

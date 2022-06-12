@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:final_capstone/utils/constants/strings_constant.dart';
-import 'package:final_capstone/widgets/custom_icon_button.dart';
+import 'package:final_capstone/utilities/constants/strings_constant.dart';
+import 'package:final_capstone/widgets/buttons/custom_icon_button.dart';
+import 'package:final_capstone/utilities/constants/icons_constant.dart';
 
 class CloseButtonAndLogo extends StatelessWidget {
   const CloseButtonAndLogo({
@@ -20,13 +21,13 @@ class CloseButtonAndLogo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomIconButton(
-          iconName: 'close.svg',
+          iconName: closeIcon,
           onPressed: () => _scaffoldKey.currentState?.closeDrawer(),
         ),
         Padding(
           padding: const EdgeInsets.only(right: 15.0),
           child: SvgPicture.asset(
-            '$logoPath/logo.svg',
+            appLogo,
             height: size.height * 0.05,
           ),
         ),

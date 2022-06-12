@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:final_capstone/utils/constants/colors_constant.dart';
-import 'package:final_capstone/utils/constants/strings_constant.dart';
+import 'package:final_capstone/utilities/constants/colors_constant.dart';
+import 'package:final_capstone/utilities/constants/strings_constant.dart';
+import 'package:final_capstone/utilities/constants/icons_constant.dart';
+import 'package:final_capstone/widgets/sized_box/horizontal_space.dart';
+import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
 
 class SignInWithMicrosoftButton extends StatelessWidget {
   const SignInWithMicrosoftButton({Key? key}) : super(key: key);
@@ -13,23 +16,23 @@ class SignInWithMicrosoftButton extends StatelessWidget {
 
     return Column(
       children: [
-        SizedBox(height: size.height * 0.15),
+        const VerticalSpace(heightPercentage: 15),
         SizedBox(
           width: size.width * 0.75,
           child: Row(
             children: [
-              SvgPicture.asset('$iconPath/microsoft.svg'),
-              SizedBox(width: size.width * 0.02),
+              SvgPicture.asset(microsoftIcon),
+              const HorizontalSpace(widthPercentage: 2),
               Text(
                 signInWithMicrosoft,
                 style: Theme.of(context).textTheme.bodyText1,
               ),
               const Spacer(),
-              SvgPicture.asset('$iconPath/double_arrow.svg'),
+              SvgPicture.asset(doubleForwardArrowIcon),
             ],
           ),
         ),
-        SizedBox(height: size.height * 0.015),
+        const VerticalSpace(heightPercentage: 1.5),
         Container(
           height: 4,
           width: size.width * 0.8,
@@ -39,4 +42,3 @@ class SignInWithMicrosoftButton extends StatelessWidget {
     );
   }
 }
-

@@ -1,4 +1,4 @@
-import 'package:final_capstone/utils/constants/colors_constant.dart';
+import 'package:final_capstone/utilities/constants/colors_constant.dart';
 import 'package:flutter/material.dart';
 
 const appBarTheme = AppBarTheme(

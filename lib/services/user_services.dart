@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:final_capstone/freezed_models/user.dart';
+import 'package:final_capstone/freezed_models/user/user.dart';
 
 class UserServices {
   List<User> _users = List<User>.empty(growable: true);

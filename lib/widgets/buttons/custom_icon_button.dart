@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:final_capstone/utils/constants/strings_constant.dart';
-
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({
     Key? key,
@@ -16,7 +14,7 @@ class CustomIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: SvgPicture.asset('$iconPath/$iconName'),
+      icon: SvgPicture.asset(iconName),
       onPressed: () => onPressed(),
     );
   }

@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const LogoAndTitle(),
                 GestureDetector(
-                  onTap: () => Navigator.of(context).pushNamed(AccountScreen.routeName),
+                  onTap: () => Navigator.of(context).pushReplacementNamed(AccountScreen.routeName),
                   child: const SignInWithMicrosoftButton(),
                 ),
                 const Spacer(),
