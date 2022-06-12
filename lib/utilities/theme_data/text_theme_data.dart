@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 
 import 'package:final_capstone/utilities/constants/strings_constant.dart';
-import 'package:flutter/material.dart';
 
 const textTheme = TextTheme(
   headline1: TextStyle(

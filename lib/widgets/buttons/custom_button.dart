@@ -9,10 +9,12 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.buttonText,
     required this.iconName,
+    required this.onPressed,
   }) : super(key: key);
 
   final String buttonText;
   final String iconName;
+  final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -33,4 +35,3 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
-

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:final_capstone/widgets/sized_box/horizontal_space.dart';
-import 'package:final_capstone/widgets/text/roboto_text_body_one.dart';
-import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
+import 'package:final_capstone/widgets/text/text.dart';
 
 class UbersichtItem extends StatelessWidget {
   const UbersichtItem({

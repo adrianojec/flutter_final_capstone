@@ -1,9 +1,9 @@
-import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:final_capstone/utilities/constants/strings_constant.dart';
 import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
+import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
 
 class LogoAndTitle extends StatelessWidget {
   const LogoAndTitle({Key? key}) : super(key: key);

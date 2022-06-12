@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:final_capstone/utilities/constants/strings_constant.dart';
 import 'package:final_capstone/widgets/circle_image.dart';
-import 'package:final_capstone/widgets/sized_box/horizontal_space.dart';
-import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
-import 'package:final_capstone/widgets/text/roboto_text_body_one.dart';
-import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
+import 'package:final_capstone/widgets/sized_box/sized_box.dart';
+import 'package:final_capstone/widgets/text/text.dart';
 
 class MeinKonto extends StatelessWidget {
   const MeinKonto({

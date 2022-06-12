@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:final_capstone/utilities/constants/colors_constant.dart';
-import 'package:final_capstone/utilities/constants/strings_constant.dart';
-import 'package:final_capstone/utilities/constants/icons_constant.dart';
-import 'package:final_capstone/widgets/sized_box/horizontal_space.dart';
-import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
+import 'package:final_capstone/utilities/constants/constants.dart';
+import 'package:final_capstone/widgets/sized_box/sized_box.dart';
 
 class SignInWithMicrosoftButton extends StatelessWidget {
   const SignInWithMicrosoftButton({Key? key}) : super(key: key);

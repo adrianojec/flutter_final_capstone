@@ -1,11 +1,12 @@
 import 'package:async_redux/async_redux.dart';
-import 'package:final_capstone/freezed_models/union_page_state.dart';
-import 'package:final_capstone/freezed_models/user/user.dart';
-import 'package:final_capstone/screens/account/account_screen.dart';
-import 'package:final_capstone/screens/account/account_view_model.dart';
 import 'package:final_capstone/states/app_state.dart';
 
-class AccountFactory extends VmFactory<AppState, AccountScreen>{
+import 'package:final_capstone/freezed_models/union_page_state.dart';
+import 'package:final_capstone/freezed_models/user/user.dart';
+import 'package:final_capstone/screens/account/account_view_model.dart';
+import 'package:final_capstone/screens/account/account_screen_connector.dart';
+
+class AccountFactory extends VmFactory<AppState, AccountScreenConnector>{
   AccountFactory(super.widget);
 
   @override

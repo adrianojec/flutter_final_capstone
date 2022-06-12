@@ -13,7 +13,7 @@ class UbersichtItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
         UbersichtItem(
           title: jahresurlaub,
           value: '25',
@@ -30,7 +30,7 @@ class UbersichtItems extends StatelessWidget {
           title: ubertragVorjahr,
           value: '01',
         ),
-        RobotoTextBodyOne(text: '(gültig bis 31.03.2021)'),
+        RobotoTextBodyOne(text: '(${gultigBis.toLowerCase()} 31.03.2021)'),
       ],
     );
   }

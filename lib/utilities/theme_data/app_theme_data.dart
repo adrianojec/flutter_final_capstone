@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:final_capstone/utilities/constants/colors_constant.dart';
-import 'package:final_capstone/utilities/theme_data/app_bar_theme_data.dart';
-import 'package:final_capstone/utilities/theme_data/text_theme_data.dart';
+import 'package:final_capstone/utilities/constants/constants.dart';
+import 'package:final_capstone/utilities/theme_data/theme_data.dart';
 
 final appTheme = ThemeData(
   scaffoldBackgroundColor: scaffoldColor,

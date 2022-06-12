@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:final_capstone/screens/account/account_screen_widgets/bericht_widget.dart';
+import 'package:final_capstone/screens/account/account_screen_widgets/bericht.dart';
 import 'package:final_capstone/utilities/constants/strings_constant.dart';
 import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
 

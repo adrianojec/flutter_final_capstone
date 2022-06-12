@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:final_capstone/screens/login/login_screen_widgets/login_screen_widgets.dart';
-import 'package:final_capstone/screens/account/account_screen.dart';
+import 'package:final_capstone/screens/account/account_screen_connector.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = '/';
@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 const LogoAndTitle(),
                 GestureDetector(
-                  onTap: () => Navigator.of(context).pushReplacementNamed(AccountScreen.routeName),
+                  onTap: () => Navigator.of(context).pushReplacementNamed(AccountScreenConnector.routeName),
                   child: const SignInWithMicrosoftButton(),
                 ),
                 const Spacer(),

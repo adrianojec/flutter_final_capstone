@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:final_capstone/utilities/constants/icons_constant.dart';
-import 'package:final_capstone/widgets/sized_box/horizontal_space.dart';
-import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
+import 'package:final_capstone/widgets/sized_box/sized_box.dart';
 import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
 import 'package:final_capstone/widgets/buttons/custom_button.dart';
 
@@ -47,6 +46,7 @@ class BerichtWidget extends StatelessWidget {
                 CustomButton(
                   buttonText: buttonText,
                   iconName: paperPlaneIconWhiteColor,
+                  onPressed: () {},
                 ),
               ],
             ),
