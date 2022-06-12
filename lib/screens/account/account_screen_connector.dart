@@ -17,8 +17,8 @@ class AccountScreenConnector extends StatelessWidget {
 
     return StoreConnector<AppState, AccountViewModel>(
       vm: () => AccountFactory(this),
-      onInit: (store) async => await store.dispatch(FetchUsers()),
-      builder: (context, vm) => const AccountScreen(),
+      onInit: (store) async => await store.dispatch(FetchUser()),
+      builder: (context, vm) => AccountScreen(user: vm.unionPageState),
     );
   }
 }

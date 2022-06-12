@@ -6,9 +6,9 @@ part 'app_state.g.dart';
 
 @freezed
 class AppState with _$AppState {
-  factory AppState({required List<User> users}) = _AppState;
+  factory AppState({User? user}) = _AppState;
 
-  factory AppState.initialState({required}) => AppState(users: List<User>.empty());
+  factory AppState.initialState({required}) => AppState(user: null);
 
   factory AppState.fromJson(Map<String, dynamic> json) => _$AppStateFromJson(json);
 }

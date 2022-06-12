@@ -12,11 +12,11 @@ class AccountFactory extends VmFactory<AppState, AccountScreenConnector>{
   @override
   Vm? fromStore() => AccountViewModel(unionPageState: _getLoadingState());
 
-  UnionPage<List<User>> _getLoadingState(){
-    if(state.users.isEmpty){
-      return const UnionPage.loading();
+  UnionPage<User> _getLoadingState(){
+    if(state.user != null){
+      return UnionPage(state.user!);
     }else{
-      return UnionPage(state.users);
+      return const UnionPage.loading();
     }
   }
 }
