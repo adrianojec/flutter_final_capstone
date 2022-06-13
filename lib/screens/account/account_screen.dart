@@ -1,13 +1,14 @@
-import 'package:final_capstone/freezed_models/union_page_state.dart';
-import 'package:final_capstone/widgets/text/text.dart';
 import 'package:flutter/material.dart';
 
 import 'package:final_capstone/utilities/constants/icons_constant.dart';
 import 'package:final_capstone/widgets/buttons/custom_icon_button.dart';
-import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
+import 'package:final_capstone/common/side_drawer/side_drawer.dart';
+import 'package:final_capstone/freezed_models/union_page_state.dart';
 import 'package:final_capstone/screens/account/account_screen_widgets/account_screen_widgets.dart';
 import 'package:final_capstone/widgets/container/custom_container.dart';
-import 'package:final_capstone/common/side_drawer/side_drawer.dart';
+import 'package:final_capstone/widgets/sized_box/sized_box.dart';
+import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
+
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({
@@ -21,54 +22,51 @@ class AccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-    return user.when(
-      (value) => Scaffold(
-        key: scaffoldKey,
-        drawer: SideDrawer(scaffoldKey: scaffoldKey),
-        appBar: AppBar(
-          title: Text(
-            value.toString(),
-            style: const TextStyle(color: Colors.black),
-          ),
-          leading: CustomIconButton(
-            iconName: menuIcon,
-            onPressed: () => scaffoldKey.currentState?.openDrawer(),
-          ),
+    return Scaffold(
+      key: scaffoldKey,
+      drawer: SideDrawer(scaffoldKey: scaffoldKey),
+      appBar: AppBar(
+        leading: CustomIconButton(
+          iconName: menuIcon,
+          onPressed: () => scaffoldKey.currentState?.openDrawer(),
         ),
-        body: Padding(
+      ),
+      body: user.when(
+            (value) => Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
                 CustomContainer(
                   child: Column(
-                    children: const [
-                      MeinKonto(),
-                      VerticalSpace(heightPercentage: 2),
-                      VorgesetzteR(),
-                      VerticalSpace(heightPercentage: 2),
-                      WochenAndMonatsbericht(),
+                    children: [
+                      MeinKonto(user: value),
+                      const VerticalSpace(heightPercentage: 2),
+                      VorgesetzteR(supervisor: value.supervisor),
+                      const VerticalSpace(heightPercentage: 2),
+                      const WochenAndMonatsbericht(),
                     ],
                   ),
                 ),
                 const VerticalSpace(heightPercentage: 2),
-                const Ubersicht(),
+                Ubersicht(user: value),
                 const AktuellesBudget(),
                 const VerticalSpace(heightPercentage: 2),
-                const Krankheitstage(),
+                Krankheitstage(sickLeave: value.sickLeave),
                 const VerticalSpace(heightPercentage: 2),
                 const AzKonto(),
               ],
             ),
           ),
         ),
-      ),
-      loading: () => const Center(child: CircularProgressIndicator()),
-      error: (message) => Center(
+        loading: () => const Center(child: CircularProgressIndicator()),
+        error: (message) => Center(
           child: RobotoTextHeadlineTwo(
-        text: message ?? '',
-        fontSize: 22,
-      )),
+            text: message!,
+            fontSize: 22,
+          ),
+        ),
+      ),
     );
   }
 }

@@ -7,7 +7,16 @@ import 'package:final_capstone/widgets/text/roboto_text_body_one.dart';
 class UbersichtItems extends StatelessWidget {
   const UbersichtItems({
     Key? key,
+    required this.annualLeave,
+    required this.remainingLeave,
+    required this.requestLeave,
+    required this.previousYearLeave,
   }) : super(key: key);
+
+  final int annualLeave;
+  final int remainingLeave;
+  final int requestLeave;
+  final int previousYearLeave;
 
   @override
   Widget build(BuildContext context) {
@@ -16,19 +25,19 @@ class UbersichtItems extends StatelessWidget {
       children: [
         UbersichtItem(
           title: jahresurlaub,
-          value: '25',
+          value: annualLeave.toString(),
         ),
         UbersichtItem(
           title: resturlaubEPOS,
-          value: '10',
+          value: remainingLeave.toString(),
         ),
         UbersichtItem(
           title: beantragt,
-          value: '08',
+          value: requestLeave.toString(),
         ),
         UbersichtItem(
           title: ubertragVorjahr,
-          value: '01',
+          value: previousYearLeave.toString(),
         ),
         RobotoTextBodyOne(text: '(${gultigBis.toLowerCase()} 31.03.2021)'),
       ],

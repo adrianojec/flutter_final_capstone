@@ -4,11 +4,14 @@ import 'package:final_capstone/utilities/constants/strings_constant.dart';
 import 'package:final_capstone/widgets/circle_image.dart';
 import 'package:final_capstone/widgets/sized_box/sized_box.dart';
 import 'package:final_capstone/widgets/text/text.dart';
+import 'package:final_capstone/freezed_models/user/user.dart';
 
 class MeinKonto extends StatelessWidget {
   const MeinKonto({
-    Key? key,
+    Key? key, required this.user,
   }) : super(key: key);
+
+  final User user;
 
   @override
   Widget build(BuildContext context) {
@@ -22,18 +25,18 @@ class MeinKonto extends StatelessWidget {
         const VerticalSpace(heightPercentage: 1),
         Row(
           children: [
-            const CircleImage(imageUrl: 'https://www.cheatsheet.com/wp-content/uploads/2019/06/RDJ-Tony-Stark.jpg'),
+            CircleImage(imageUrl: user.imageUrl),
             const HorizontalSpace(widthPercentage: 2.5),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 RobotoTextHeadlineTwo(
-                  text: 'Tony Stark',
+                  text: '${user.firstName} ${user.lastName}',
                   fontSize: 16,
                 ),
-                RobotoTextBodyOne(text: 'tony_stark@gmail.com'),
-                VerticalSpace(heightPercentage: 1.5),
-                RobotoTextBodyOne(text: 'Monteur'),
+                RobotoTextBodyOne(text: user.email),
+                const VerticalSpace(heightPercentage: 1.5),
+                RobotoTextBodyOne(text: user.position),
               ],
             ),
           ],

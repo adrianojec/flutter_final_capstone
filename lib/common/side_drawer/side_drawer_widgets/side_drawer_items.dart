@@ -6,12 +6,14 @@ import 'package:final_capstone/common/side_drawer/side_drawer_widgets/side_drawe
 class SideDrawerItems extends StatefulWidget {
   const SideDrawerItems({Key? key}) : super(key: key);
 
+
+  static int selectedIndex = 0;
+
   @override
   State<SideDrawerItems> createState() => _SideDrawerItemsState();
 }
 
 class _SideDrawerItemsState extends State<SideDrawerItems> {
-  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +24,9 @@ class _SideDrawerItemsState extends State<SideDrawerItems> {
         child: ListView.builder(
           itemCount: SideDrawerData.sideDrawerText.length,
           itemBuilder: (context, index) => GestureDetector(
-            onTap: () => setState(() => _selectedIndex = index),
+            onTap: () => setState(() => SideDrawerItems.selectedIndex = index),
             child: SideDrawerItem(
-              currentIndex: index,
-              selectedIndex: _selectedIndex,
+              currentIndex: index
             ),
           ),
         ),

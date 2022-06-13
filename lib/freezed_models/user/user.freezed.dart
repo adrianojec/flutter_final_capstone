@@ -20,11 +20,11 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
-  String get supervisorId => throw _privateConstructorUsedError;
   String get firstName => throw _privateConstructorUsedError;
   String get lastName => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get position => throw _privateConstructorUsedError;
+  Supervisor get supervisor => throw _privateConstructorUsedError;
   String get address => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
@@ -32,7 +32,7 @@ mixin _$User {
   String get mobile => throw _privateConstructorUsedError;
   int get annualLeave => throw _privateConstructorUsedError;
   int get remainingLeave => throw _privateConstructorUsedError;
-  int get requests => throw _privateConstructorUsedError;
+  int get requestLeave => throw _privateConstructorUsedError;
   int get previousYearLeave => throw _privateConstructorUsedError;
   int get sickLeave => throw _privateConstructorUsedError;
 
@@ -46,11 +46,11 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {String supervisorId,
-      String firstName,
+      {String firstName,
       String lastName,
       String email,
       String position,
+      Supervisor supervisor,
       String address,
       String imageUrl,
       String telephone,
@@ -58,9 +58,11 @@ abstract class $UserCopyWith<$Res> {
       String mobile,
       int annualLeave,
       int remainingLeave,
-      int requests,
+      int requestLeave,
       int previousYearLeave,
       int sickLeave});
+
+  $SupervisorCopyWith<$Res> get supervisor;
 }
 
 /// @nodoc
@@ -73,11 +75,11 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? supervisorId = freezed,
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? email = freezed,
     Object? position = freezed,
+    Object? supervisor = freezed,
     Object? address = freezed,
     Object? imageUrl = freezed,
     Object? telephone = freezed,
@@ -85,15 +87,11 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? mobile = freezed,
     Object? annualLeave = freezed,
     Object? remainingLeave = freezed,
-    Object? requests = freezed,
+    Object? requestLeave = freezed,
     Object? previousYearLeave = freezed,
     Object? sickLeave = freezed,
   }) {
     return _then(_value.copyWith(
-      supervisorId: supervisorId == freezed
-          ? _value.supervisorId
-          : supervisorId // ignore: cast_nullable_to_non_nullable
-              as String,
       firstName: firstName == freezed
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -110,6 +108,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as String,
+      supervisor: supervisor == freezed
+          ? _value.supervisor
+          : supervisor // ignore: cast_nullable_to_non_nullable
+              as Supervisor,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -138,9 +140,9 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.remainingLeave
           : remainingLeave // ignore: cast_nullable_to_non_nullable
               as int,
-      requests: requests == freezed
-          ? _value.requests
-          : requests // ignore: cast_nullable_to_non_nullable
+      requestLeave: requestLeave == freezed
+          ? _value.requestLeave
+          : requestLeave // ignore: cast_nullable_to_non_nullable
               as int,
       previousYearLeave: previousYearLeave == freezed
           ? _value.previousYearLeave
@@ -152,6 +154,13 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
               as int,
     ));
   }
+
+  @override
+  $SupervisorCopyWith<$Res> get supervisor {
+    return $SupervisorCopyWith<$Res>(_value.supervisor, (value) {
+      return _then(_value.copyWith(supervisor: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -160,11 +169,11 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$$_UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String supervisorId,
-      String firstName,
+      {String firstName,
       String lastName,
       String email,
       String position,
+      Supervisor supervisor,
       String address,
       String imageUrl,
       String telephone,
@@ -172,9 +181,12 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String mobile,
       int annualLeave,
       int remainingLeave,
-      int requests,
+      int requestLeave,
       int previousYearLeave,
       int sickLeave});
+
+  @override
+  $SupervisorCopyWith<$Res> get supervisor;
 }
 
 /// @nodoc
@@ -188,11 +200,11 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? supervisorId = freezed,
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? email = freezed,
     Object? position = freezed,
+    Object? supervisor = freezed,
     Object? address = freezed,
     Object? imageUrl = freezed,
     Object? telephone = freezed,
@@ -200,15 +212,11 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? mobile = freezed,
     Object? annualLeave = freezed,
     Object? remainingLeave = freezed,
-    Object? requests = freezed,
+    Object? requestLeave = freezed,
     Object? previousYearLeave = freezed,
     Object? sickLeave = freezed,
   }) {
     return _then(_$_User(
-      supervisorId: supervisorId == freezed
-          ? _value.supervisorId
-          : supervisorId // ignore: cast_nullable_to_non_nullable
-              as String,
       firstName: firstName == freezed
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -225,6 +233,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.position
           : position // ignore: cast_nullable_to_non_nullable
               as String,
+      supervisor: supervisor == freezed
+          ? _value.supervisor
+          : supervisor // ignore: cast_nullable_to_non_nullable
+              as Supervisor,
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -253,9 +265,9 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.remainingLeave
           : remainingLeave // ignore: cast_nullable_to_non_nullable
               as int,
-      requests: requests == freezed
-          ? _value.requests
-          : requests // ignore: cast_nullable_to_non_nullable
+      requestLeave: requestLeave == freezed
+          ? _value.requestLeave
+          : requestLeave // ignore: cast_nullable_to_non_nullable
               as int,
       previousYearLeave: previousYearLeave == freezed
           ? _value.previousYearLeave
@@ -273,11 +285,11 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_User implements _User {
   _$_User(
-      {required this.supervisorId,
-      required this.firstName,
+      {required this.firstName,
       required this.lastName,
       required this.email,
       required this.position,
+      required this.supervisor,
       required this.address,
       required this.imageUrl,
       required this.telephone,
@@ -285,14 +297,12 @@ class _$_User implements _User {
       required this.mobile,
       required this.annualLeave,
       required this.remainingLeave,
-      required this.requests,
+      required this.requestLeave,
       required this.previousYearLeave,
       required this.sickLeave});
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
-  @override
-  final String supervisorId;
   @override
   final String firstName;
   @override
@@ -301,6 +311,8 @@ class _$_User implements _User {
   final String email;
   @override
   final String position;
+  @override
+  final Supervisor supervisor;
   @override
   final String address;
   @override
@@ -316,7 +328,7 @@ class _$_User implements _User {
   @override
   final int remainingLeave;
   @override
-  final int requests;
+  final int requestLeave;
   @override
   final int previousYearLeave;
   @override
@@ -324,7 +336,7 @@ class _$_User implements _User {
 
   @override
   String toString() {
-    return 'User(supervisorId: $supervisorId, firstName: $firstName, lastName: $lastName, email: $email, position: $position, address: $address, imageUrl: $imageUrl, telephone: $telephone, fax: $fax, mobile: $mobile, annualLeave: $annualLeave, remainingLeave: $remainingLeave, requests: $requests, previousYearLeave: $previousYearLeave, sickLeave: $sickLeave)';
+    return 'User(firstName: $firstName, lastName: $lastName, email: $email, position: $position, supervisor: $supervisor, address: $address, imageUrl: $imageUrl, telephone: $telephone, fax: $fax, mobile: $mobile, annualLeave: $annualLeave, remainingLeave: $remainingLeave, requestLeave: $requestLeave, previousYearLeave: $previousYearLeave, sickLeave: $sickLeave)';
   }
 
   @override
@@ -332,12 +344,12 @@ class _$_User implements _User {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_User &&
-            const DeepCollectionEquality()
-                .equals(other.supervisorId, supervisorId) &&
             const DeepCollectionEquality().equals(other.firstName, firstName) &&
             const DeepCollectionEquality().equals(other.lastName, lastName) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.position, position) &&
+            const DeepCollectionEquality()
+                .equals(other.supervisor, supervisor) &&
             const DeepCollectionEquality().equals(other.address, address) &&
             const DeepCollectionEquality().equals(other.imageUrl, imageUrl) &&
             const DeepCollectionEquality().equals(other.telephone, telephone) &&
@@ -347,7 +359,8 @@ class _$_User implements _User {
                 .equals(other.annualLeave, annualLeave) &&
             const DeepCollectionEquality()
                 .equals(other.remainingLeave, remainingLeave) &&
-            const DeepCollectionEquality().equals(other.requests, requests) &&
+            const DeepCollectionEquality()
+                .equals(other.requestLeave, requestLeave) &&
             const DeepCollectionEquality()
                 .equals(other.previousYearLeave, previousYearLeave) &&
             const DeepCollectionEquality().equals(other.sickLeave, sickLeave));
@@ -357,11 +370,11 @@ class _$_User implements _User {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(supervisorId),
       const DeepCollectionEquality().hash(firstName),
       const DeepCollectionEquality().hash(lastName),
       const DeepCollectionEquality().hash(email),
       const DeepCollectionEquality().hash(position),
+      const DeepCollectionEquality().hash(supervisor),
       const DeepCollectionEquality().hash(address),
       const DeepCollectionEquality().hash(imageUrl),
       const DeepCollectionEquality().hash(telephone),
@@ -369,7 +382,7 @@ class _$_User implements _User {
       const DeepCollectionEquality().hash(mobile),
       const DeepCollectionEquality().hash(annualLeave),
       const DeepCollectionEquality().hash(remainingLeave),
-      const DeepCollectionEquality().hash(requests),
+      const DeepCollectionEquality().hash(requestLeave),
       const DeepCollectionEquality().hash(previousYearLeave),
       const DeepCollectionEquality().hash(sickLeave));
 
@@ -386,11 +399,11 @@ class _$_User implements _User {
 
 abstract class _User implements User {
   factory _User(
-      {required final String supervisorId,
-      required final String firstName,
+      {required final String firstName,
       required final String lastName,
       required final String email,
       required final String position,
+      required final Supervisor supervisor,
       required final String address,
       required final String imageUrl,
       required final String telephone,
@@ -398,14 +411,12 @@ abstract class _User implements User {
       required final String mobile,
       required final int annualLeave,
       required final int remainingLeave,
-      required final int requests,
+      required final int requestLeave,
       required final int previousYearLeave,
       required final int sickLeave}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
-  @override
-  String get supervisorId => throw _privateConstructorUsedError;
   @override
   String get firstName => throw _privateConstructorUsedError;
   @override
@@ -414,6 +425,8 @@ abstract class _User implements User {
   String get email => throw _privateConstructorUsedError;
   @override
   String get position => throw _privateConstructorUsedError;
+  @override
+  Supervisor get supervisor => throw _privateConstructorUsedError;
   @override
   String get address => throw _privateConstructorUsedError;
   @override
@@ -429,7 +442,7 @@ abstract class _User implements User {
   @override
   int get remainingLeave => throw _privateConstructorUsedError;
   @override
-  int get requests => throw _privateConstructorUsedError;
+  int get requestLeave => throw _privateConstructorUsedError;
   @override
   int get previousYearLeave => throw _privateConstructorUsedError;
   @override

@@ -1,3 +1,5 @@
+import 'package:final_capstone/common/side_drawer/side_drawer_widgets/side_drawer_items.dart';
+import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -8,44 +10,46 @@ class SideDrawerItem extends StatelessWidget {
   const SideDrawerItem({
     Key? key,
     required this.currentIndex,
-    required this.selectedIndex,
   }) : super(key: key);
 
   final int currentIndex;
-  final int selectedIndex;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    Orientation deviceOrientation = MediaQuery.of(context).orientation;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Column(
-          children: [
-            SvgPicture.asset(
-              SideDrawerData.sideDrawerIcons[currentIndex],
-              height: size.height * 0.05,
-              color: selectedIndex == currentIndex ? Colors.black :lightGreyTextColor,
+        Container(
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                color: SideDrawerItems.selectedIndex == currentIndex ? const Color(0xFF8465FF): Colors.transparent,
+                width: 4,
+              )
             ),
-            SizedBox(height: size.height * 0.02),
-            Text(
-              SideDrawerData.sideDrawerText[currentIndex],
-              style: Theme.of(context).textTheme.headline2!.copyWith(
-                    fontSize: 14,
-                    color: selectedIndex == currentIndex ? Colors.black: darkBlueTextColor,
-                  ),
-            ),
-            SizedBox(height: size.height * 0.01),
-            if(selectedIndex == currentIndex) Container(
-              height: 4,
-              width: deviceOrientation == Orientation.portrait ? size.width * 0.23: size.width * 0.1,
-              color: const Color(0xFF8465FF),
-            ),
-            SizedBox(height: size.height * 0.05),
-          ],
+          ),
+          child: Column(
+            children: [
+              SvgPicture.asset(
+                SideDrawerData.sideDrawerIcons[currentIndex],
+                height: size.height * 0.05,
+                color: SideDrawerItems.selectedIndex == currentIndex ? Colors.black :lightGreyTextColor,
+              ),
+              const VerticalSpace(heightPercentage: 2),
+              Text(
+                SideDrawerData.sideDrawerText[currentIndex],
+                style: Theme.of(context).textTheme.headline2!.copyWith(
+                      fontSize: 14,
+                      color: SideDrawerItems.selectedIndex == currentIndex ? Colors.black: darkBlueTextColor,
+                    ),
+              ),
+              const VerticalSpace(heightPercentage: 1),
+            ],
+          ),
         ),
+        const VerticalSpace(heightPercentage: 5),
       ],
     );
   }

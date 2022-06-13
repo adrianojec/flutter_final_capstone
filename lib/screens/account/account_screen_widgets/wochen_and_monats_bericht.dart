@@ -1,3 +1,4 @@
+import 'package:final_capstone/data/date_and_time_data.dart';
 import 'package:flutter/material.dart';
 
 import 'package:final_capstone/screens/account/account_screen_widgets/bericht.dart';
@@ -12,16 +13,16 @@ class WochenAndMonatsbericht extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         BerichtWidget(
           title: wochenbericht,
-          dates: '12.03 - 19.03.2021',
+          dates: '$firstDateOfTheWeek - $lastDateOfTheWeek',
           buttonText: wochenberichtZuschicken,
         ),
-        VerticalSpace(heightPercentage: 2),
+        const VerticalSpace(heightPercentage: 2),
         BerichtWidget(
           title: monatsbericht,
-          dates: 'April 2020',
+          dates: '$month $year',
           buttonText: monatsberichtErstellen,
         ),
       ],

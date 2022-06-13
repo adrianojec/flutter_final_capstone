@@ -6,13 +6,18 @@ import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
 import 'package:final_capstone/screens/account/account_screen_widgets/ubersicht_widgets/ubersicht_widgets.dart';
 import 'package:final_capstone/widgets/sized_box/vertical_space.dart';
 import 'package:final_capstone/widgets/container/custom_container.dart';
+import 'package:final_capstone/freezed_models/user/user.dart';
 
 class Ubersicht extends StatelessWidget {
-  const Ubersicht({Key? key}) : super(key: key);
+  const Ubersicht({
+    Key? key,
+    required this.user,
+  }) : super(key: key);
+
+  final User user;
 
   @override
   Widget build(BuildContext context) {
-
     return CustomContainer(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +33,12 @@ class Ubersicht extends StatelessWidget {
             ],
           ),
           const VerticalSpace(heightPercentage: 2),
-          const UbersichtItems(),
+          UbersichtItems(
+            annualLeave: user.annualLeave,
+            remainingLeave: user.remainingLeave,
+            requestLeave: user.requestLeave,
+            previousYearLeave: user.previousYearLeave,
+          ),
           const UrlaubBeantragen(),
         ],
       ),
