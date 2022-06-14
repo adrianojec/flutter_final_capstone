@@ -1,6 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'package:final_capstone/freezed_models/supervisor/supervisor.dart';
+import 'package:final_capstone/freezed_models/address/address.dart';
+
 
 part 'user.freezed.dart';
 part 'user.g.dart';
@@ -13,7 +15,7 @@ class User with _$User {
     required String email,
     required String position,
     required Supervisor supervisor,
-    required String address,
+    required Address address,
     required String imageUrl,
     required String telephone,
     required String fax,

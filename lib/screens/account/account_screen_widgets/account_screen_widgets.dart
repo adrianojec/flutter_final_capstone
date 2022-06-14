@@ -3,7 +3,5 @@ export 'package:final_capstone/screens/account/account_screen_widgets/aktuelles_
 export 'package:final_capstone/screens/account/account_screen_widgets/az_konto.dart';
 export 'package:final_capstone/screens/account/account_screen_widgets/bericht.dart';
 export 'package:final_capstone/screens/account/account_screen_widgets/krankheitstage.dart';
-export 'package:final_capstone/screens/account/account_screen_widgets/mein_konto.dart';
 export 'package:final_capstone/screens/account/account_screen_widgets/ubersicht.dart';
-export 'package:final_capstone/screens/account/account_screen_widgets/vorgesetzte_r.dart';
 export 'package:final_capstone/screens/account/account_screen_widgets/wochen_and_monats_bericht.dart';

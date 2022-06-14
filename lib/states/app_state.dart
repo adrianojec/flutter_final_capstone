@@ -2,6 +2,7 @@ import 'package:final_capstone/freezed_models/user/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app_state.freezed.dart';
+
 part 'app_state.g.dart';
 
 @freezed

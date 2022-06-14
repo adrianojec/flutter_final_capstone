@@ -25,7 +25,7 @@ mixin _$User {
   String get email => throw _privateConstructorUsedError;
   String get position => throw _privateConstructorUsedError;
   Supervisor get supervisor => throw _privateConstructorUsedError;
-  String get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
   String get fax => throw _privateConstructorUsedError;
@@ -51,7 +51,7 @@ abstract class $UserCopyWith<$Res> {
       String email,
       String position,
       Supervisor supervisor,
-      String address,
+      Address address,
       String imageUrl,
       String telephone,
       String fax,
@@ -63,6 +63,7 @@ abstract class $UserCopyWith<$Res> {
       int sickLeave});
 
   $SupervisorCopyWith<$Res> get supervisor;
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -115,7 +116,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Address,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -161,6 +162,13 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       return _then(_value.copyWith(supervisor: value));
     });
   }
+
+  @override
+  $AddressCopyWith<$Res> get address {
+    return $AddressCopyWith<$Res>(_value.address, (value) {
+      return _then(_value.copyWith(address: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -174,7 +182,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String email,
       String position,
       Supervisor supervisor,
-      String address,
+      Address address,
       String imageUrl,
       String telephone,
       String fax,
@@ -187,6 +195,8 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
 
   @override
   $SupervisorCopyWith<$Res> get supervisor;
+  @override
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -240,7 +250,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Address,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -314,7 +324,7 @@ class _$_User implements _User {
   @override
   final Supervisor supervisor;
   @override
-  final String address;
+  final Address address;
   @override
   final String imageUrl;
   @override
@@ -404,7 +414,7 @@ abstract class _User implements User {
       required final String email,
       required final String position,
       required final Supervisor supervisor,
-      required final String address,
+      required final Address address,
       required final String imageUrl,
       required final String telephone,
       required final String fax,
@@ -428,7 +438,7 @@ abstract class _User implements User {
   @override
   Supervisor get supervisor => throw _privateConstructorUsedError;
   @override
-  String get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
   @override
   String get imageUrl => throw _privateConstructorUsedError;
   @override

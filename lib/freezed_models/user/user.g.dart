@@ -13,7 +13,7 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       position: json['position'] as String,
       supervisor:
           Supervisor.fromJson(json['supervisor'] as Map<String, dynamic>),
-      address: json['address'] as String,
+      address: Address.fromJson(json['address'] as Map<String, dynamic>),
       imageUrl: json['imageUrl'] as String,
       telephone: json['telephone'] as String,
       fax: json['fax'] as String,
