@@ -81,6 +81,7 @@ const String wirHabenIhrenAntragErfasst = 'Wir haben Ihren Antrag erfasst';
 const String betriebsurlaub = 'Betriebsurlaub';
 const String denGanzenTag = 'Den ganzen Tag';
 const String wartenAufFreigabe = 'Warten auf Freigabe';
+const String offen = 'Offen';
 
 
 

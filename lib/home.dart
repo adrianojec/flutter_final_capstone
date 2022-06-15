@@ -10,7 +10,6 @@ import 'package:final_capstone/screens/account/account_screen.dart';
 import 'package:final_capstone/screens/business_card/business_card_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
     Key? key,
@@ -25,7 +24,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   @override
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
@@ -33,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final pages = [
       AccountScreen(user: widget.user),
       BusinessCardScreen(user: widget.user),
-      const TimeTrackingScreen(),
     ];
 
     return Scaffold(
@@ -46,7 +43,10 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: () => scaffoldKey.currentState?.openDrawer(),
         ),
         actions: [
-          IconButton(onPressed: (){}, icon: SvgPicture.asset(addIconWhiteColor))
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(addIconWhiteColor),
+          )
         ],
       ),
       body: ValueListenableBuilder<int>(

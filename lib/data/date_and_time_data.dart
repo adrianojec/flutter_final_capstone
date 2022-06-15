@@ -1,6 +1,7 @@
 import 'package:intl/intl.dart';
 
 final dateNow = DateTime.now();
+final currentDate = DateFormat('MM.dd.yyyy').format(dateNow);
 final month = DateFormat('MMMM').format(dateNow);
 final year = DateFormat('yyyy').format(dateNow);
 final weekdays = dateNow.weekday;

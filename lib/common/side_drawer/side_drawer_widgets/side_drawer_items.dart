@@ -1,8 +1,9 @@
-import 'package:final_capstone/home.dart';
 import 'package:flutter/material.dart';
 
-import 'package:final_capstone/data/side_drawer_data.dart';
 import 'package:final_capstone/common/side_drawer/side_drawer_widgets/side_drawer_item.dart';
+import 'package:final_capstone/data/side_drawer_data.dart';
+import 'package:final_capstone/home.dart';
+import 'package:final_capstone/screens/time_tracking/time_tracking_screen.dart';
 
 class SideDrawerItems extends StatefulWidget {
   const SideDrawerItems({Key? key}) : super(key: key);
@@ -16,9 +17,14 @@ class SideDrawerItems extends StatefulWidget {
 class _SideDrawerItemsState extends State<SideDrawerItems> {
   void selectedItem(int index){
     setState((){
-      SideDrawerItems.selectedIndex = index;
-      HomeScreen.selectedItem.value = SideDrawerItems.selectedIndex;
-      Navigator.of(context).pop();
+      if(index != 2){
+        SideDrawerItems.selectedIndex = index;
+        HomeScreen.selectedItem.value = SideDrawerItems.selectedIndex;
+        Navigator.of(context).pop();
+      }else{
+        SideDrawerItems.selectedIndex = index;
+        Navigator.of(context).pushNamed(TimeTrackingScreen.routeName);
+      }
     });
   }
   
