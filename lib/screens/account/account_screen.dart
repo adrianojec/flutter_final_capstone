@@ -35,7 +35,7 @@ class AccountScreen extends StatelessWidget {
                       email: value.email,
                       position: value.position,
                     ),
-                    const VerticalSpace(heightPercentage: 2),
+                    const VerticalSpace(heightPercentage: 4),
                     AccountDetails(
                       title: vorgesetzter,
                       imageUrl: value.supervisor.imageUrl,
@@ -44,7 +44,7 @@ class AccountScreen extends StatelessWidget {
                       email: value.supervisor.email,
                       mobile: value.supervisor.mobile,
                     ),
-                    const VerticalSpace(heightPercentage: 2),
+                    const VerticalSpace(heightPercentage: 4),
                     const WochenAndMonatsbericht(),
                   ],
                 ),

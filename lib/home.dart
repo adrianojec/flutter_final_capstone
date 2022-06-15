@@ -1,3 +1,4 @@
+import 'package:final_capstone/screens/time_tracking/time_tracking_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:final_capstone/utilities/constants/icons_constant.dart';
@@ -7,6 +8,7 @@ import 'package:final_capstone/freezed_models/union_page_state.dart';
 import 'package:final_capstone/common/side_drawer/side_drawer_widgets/side_drawer_items.dart';
 import 'package:final_capstone/screens/account/account_screen.dart';
 import 'package:final_capstone/screens/business_card/business_card_screen.dart';
+import 'package:flutter_svg/svg.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -31,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final pages = [
       AccountScreen(user: widget.user),
       BusinessCardScreen(user: widget.user),
+      const TimeTrackingScreen(),
     ];
 
     return Scaffold(
@@ -42,6 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
           iconName: menuIcon,
           onPressed: () => scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: [
+          IconButton(onPressed: (){}, icon: SvgPicture.asset(addIconWhiteColor))
+        ],
       ),
       body: ValueListenableBuilder<int>(
         valueListenable: HomeScreen.selectedItem,

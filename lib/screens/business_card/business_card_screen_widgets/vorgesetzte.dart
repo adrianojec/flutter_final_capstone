@@ -6,15 +6,15 @@ import 'package:final_capstone/widgets/account_details.dart';
 import 'package:final_capstone/widgets/address_details.dart';
 import 'package:final_capstone/widgets/contact_details.dart';
 import 'package:final_capstone/widgets/sized_box/sized_box.dart';
-import 'package:final_capstone/freezed_models/user/user.dart';
+import 'package:final_capstone/freezed_models/supervisor/supervisor.dart';
 
-class VisitenKarte extends StatelessWidget {
-  const VisitenKarte({
+class Vorgesetzte extends StatelessWidget {
+  const Vorgesetzte({
     Key? key,
-    required this.user,
+    required this.supervisor,
   }) : super(key: key);
 
-  final User user;
+  final Supervisor supervisor;
 
   @override
   Widget build(BuildContext context) {
@@ -22,23 +22,23 @@ class VisitenKarte extends StatelessWidget {
       child: Column(
         children: [
           AccountDetails(
-            title: visitenkarte,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-            position: user.position,
-            imageUrl: user.imageUrl,
+            title: vorgesetzte,
+            firstName: supervisor.firstName,
+            lastName: supervisor.lastName,
+            email: supervisor.email,
+            position: supervisor.position,
+            imageUrl: supervisor.imageUrl,
           ),
           const VerticalSpace(heightPercentage: 4),
           SvgPicture.asset('assets/images/user_qr.svg'),
           const VerticalSpace(heightPercentage: 4),
-          AddressDetails(address: user.address),
+          AddressDetails(address: supervisor.address),
           const VerticalSpace(heightPercentage: 4),
           ContactDetails(
-            telephone: user.telephone,
-            fax: user.fax,
-            mobile: user.mobile,
-            email: user.email,
+            telephone: supervisor.telephone,
+            fax: supervisor.fax,
+            mobile: supervisor.mobile,
+            email: supervisor.email,
           ),
         ],
       ),

@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'package:final_capstone/freezed_models/address/address.dart';
+
 part 'supervisor.freezed.dart';
 part 'supervisor.g.dart';
 
@@ -11,7 +13,7 @@ class Supervisor with _$Supervisor {
     required String email,
     required String position,
     required String imageUrl,
-    required String address,
+    required Address address,
     required String telephone,
     required String fax,
     required String mobile,

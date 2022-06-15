@@ -13,7 +13,7 @@ _$_Supervisor _$$_SupervisorFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String,
       position: json['position'] as String,
       imageUrl: json['imageUrl'] as String,
-      address: json['address'] as String,
+      address: Address.fromJson(json['address'] as Map<String, dynamic>),
       telephone: json['telephone'] as String,
       fax: json['fax'] as String,
       mobile: json['mobile'] as String,

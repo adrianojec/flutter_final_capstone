@@ -25,7 +25,7 @@ mixin _$Supervisor {
   String get email => throw _privateConstructorUsedError;
   String get position => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
-  String get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
   String get telephone => throw _privateConstructorUsedError;
   String get fax => throw _privateConstructorUsedError;
   String get mobile => throw _privateConstructorUsedError;
@@ -47,10 +47,12 @@ abstract class $SupervisorCopyWith<$Res> {
       String email,
       String position,
       String imageUrl,
-      String address,
+      Address address,
       String telephone,
       String fax,
       String mobile});
+
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -97,7 +99,7 @@ class _$SupervisorCopyWithImpl<$Res> implements $SupervisorCopyWith<$Res> {
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Address,
       telephone: telephone == freezed
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -111,6 +113,13 @@ class _$SupervisorCopyWithImpl<$Res> implements $SupervisorCopyWith<$Res> {
           : mobile // ignore: cast_nullable_to_non_nullable
               as String,
     ));
+  }
+
+  @override
+  $AddressCopyWith<$Res> get address {
+    return $AddressCopyWith<$Res>(_value.address, (value) {
+      return _then(_value.copyWith(address: value));
+    });
   }
 }
 
@@ -127,10 +136,13 @@ abstract class _$$_SupervisorCopyWith<$Res>
       String email,
       String position,
       String imageUrl,
-      String address,
+      Address address,
       String telephone,
       String fax,
       String mobile});
+
+  @override
+  $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -179,7 +191,7 @@ class __$$_SupervisorCopyWithImpl<$Res> extends _$SupervisorCopyWithImpl<$Res>
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Address,
       telephone: telephone == freezed
           ? _value.telephone
           : telephone // ignore: cast_nullable_to_non_nullable
@@ -224,7 +236,7 @@ class _$_Supervisor implements _Supervisor {
   @override
   final String imageUrl;
   @override
-  final String address;
+  final Address address;
   @override
   final String telephone;
   @override
@@ -285,7 +297,7 @@ abstract class _Supervisor implements Supervisor {
       required final String email,
       required final String position,
       required final String imageUrl,
-      required final String address,
+      required final Address address,
       required final String telephone,
       required final String fax,
       required final String mobile}) = _$_Supervisor;
@@ -304,7 +316,7 @@ abstract class _Supervisor implements Supervisor {
   @override
   String get imageUrl => throw _privateConstructorUsedError;
   @override
-  String get address => throw _privateConstructorUsedError;
+  Address get address => throw _privateConstructorUsedError;
   @override
   String get telephone => throw _privateConstructorUsedError;
   @override

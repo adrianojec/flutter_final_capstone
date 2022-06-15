@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 
 import 'package:final_capstone/utilities/constants/colors_constant.dart';
-import 'package:final_capstone/widgets/tab_bar/tab_bar_item/tab_bar_item.dart';
 
 class CustomTabBar extends StatelessWidget {
   const CustomTabBar({
     Key? key,
     required TabController tabController,
-    required this.firstBarItemText,
-    required this.secondBarItemText,
+    required this.tabs,
   })  : _tabController = tabController,
         super(key: key);
 
   final TabController _tabController;
-  final String firstBarItemText;
-  final String secondBarItemText;
+  final List<Widget> tabs;
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +32,7 @@ class CustomTabBar extends StatelessWidget {
         ),
       ),
       unselectedLabelColor: blackTextColor.withOpacity(0.3),
-      tabs: [
-        TabBarItem(text: firstBarItemText),
-        TabBarItem(text: secondBarItemText),
-      ],
+      tabs: tabs,
     );
   }
 }

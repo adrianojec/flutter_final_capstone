@@ -17,7 +17,7 @@ class _SideDrawerItemsState extends State<SideDrawerItems> {
   void selectedItem(int index){
     setState((){
       SideDrawerItems.selectedIndex = index;
-      HomeScreen.selectedItem.value = index;
+      HomeScreen.selectedItem.value = SideDrawerItems.selectedIndex;
       Navigator.of(context).pop();
     });
   }
