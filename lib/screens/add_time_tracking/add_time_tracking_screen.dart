@@ -7,8 +7,7 @@ import 'package:final_capstone/screens/add_time_tracking/add_time_tracking_scree
 import 'package:final_capstone/widgets/tab_bar/custom_tab_bar.dart';
 import 'package:final_capstone/widgets/tab_bar/tab_bar_item/tab_bar_item.dart';
 
-
-class AddTimeTrackingScreen extends StatefulWidget{
+class AddTimeTrackingScreen extends StatefulWidget {
   static const routeName = '/add-time-tracking';
 
   const AddTimeTrackingScreen({Key? key}) : super(key: key);
@@ -67,13 +66,15 @@ class _AddTimeTrackingScreenState extends State<AddTimeTrackingScreen> with Sing
                 TabBarItem(text: pause),
               ],
             ),
-            Expanded(child: TabBarView(
-              controller: _tabController,
-              children: [
-                Arbeitszeit(),
-                Text(pause),
-              ],
-            ),)
+            Expanded(
+              child: TabBarView(
+                controller: _tabController,
+                children: const [
+                  Arbeitszeit(),
+                  Text(pause),
+                ],
+              ),
+            ),
           ],
         ),
       ),

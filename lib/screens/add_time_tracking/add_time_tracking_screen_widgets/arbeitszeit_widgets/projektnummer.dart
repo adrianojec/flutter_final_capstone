@@ -1,7 +1,6 @@
-import 'package:final_capstone/utilities/constants/icons_constant.dart';
 import 'package:flutter/material.dart';
 
-import 'package:final_capstone/utilities/constants/strings_constant.dart';
+import 'package:final_capstone/utilities/constants/constants.dart';
 import 'package:final_capstone/widgets/drop_down/custom_drop_down.dart';
 import 'package:final_capstone/widgets/text/text.dart';
 import 'package:flutter_svg/svg.dart';

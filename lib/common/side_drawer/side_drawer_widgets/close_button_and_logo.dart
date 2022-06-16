@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:final_capstone/utilities/constants/strings_constant.dart';
+import 'package:final_capstone/utilities/constants/constants.dart';
 import 'package:final_capstone/widgets/buttons/custom_icon_button.dart';
-import 'package:final_capstone/utilities/constants/icons_constant.dart';
 
 class CloseButtonAndLogo extends StatelessWidget {
   const CloseButtonAndLogo({

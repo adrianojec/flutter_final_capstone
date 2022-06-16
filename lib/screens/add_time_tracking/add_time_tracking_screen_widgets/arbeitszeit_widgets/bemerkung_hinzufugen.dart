@@ -21,14 +21,14 @@ class BemerkungHinzufugen extends StatelessWidget {
             maxLines: 5,
             decoration: InputDecoration(
                 border: InputBorder.none,
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.only(
+                prefixIcon: const Padding(
+                  padding: EdgeInsets.only(
                     bottom: 50.0,
                     left: 10.0,
                     right: 10.0,
                   ),
-                  child: const CircleImage(
-                      imageUrl: 'https://www.cheatsheet.com/wp-content/uploads/2019/06/RDJ-Tony-Stark.jpg'),
+                  child:
+                      CircleImage(imageUrl: 'https://www.cheatsheet.com/wp-content/uploads/2019/06/RDJ-Tony-Stark.jpg'),
                 ),
                 hintText: bemerkungHinzufugen,
                 hintStyle: Theme.of(context).textTheme.bodyText2!.copyWith(color: Colors.black.withOpacity(0.3))),
@@ -40,7 +40,7 @@ class BemerkungHinzufugen extends StatelessWidget {
           children: [
             MaterialButton(
               onPressed: () {},
-              child: RobotoTextHeadlineTwo(
+              child: const RobotoTextHeadlineTwo(
                 text: abbrechen,
                 fontSize: 14,
               ),
@@ -48,7 +48,7 @@ class BemerkungHinzufugen extends StatelessWidget {
             CustomButton(
               buttonText: speichern,
               iconName: paperPlaneIconWhiteColor,
-              onPressed: (){},
+              onPressed: () {},
             ),
           ],
         ),
@@ -56,4 +56,3 @@ class BemerkungHinzufugen extends StatelessWidget {
     );
   }
 }
-

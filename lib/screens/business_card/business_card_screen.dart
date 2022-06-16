@@ -1,4 +1,3 @@
-import 'package:final_capstone/widgets/tab_bar/tab_bar_item/tab_bar_item.dart';
 import 'package:flutter/material.dart';
 
 import 'package:final_capstone/utilities/constants/constantS.dart';
@@ -8,6 +7,7 @@ import 'package:final_capstone/freezed_models/union_page_state.dart';
 import 'package:final_capstone/widgets/sized_box/sized_box.dart';
 import 'package:final_capstone/screens/business_card/business_card_screen_widgets/visitenkarte.dart';
 import 'package:final_capstone/screens/business_card/business_card_screen_widgets/vorgesetzte.dart';
+import 'package:final_capstone/widgets/tab_bar/tab_bar_item/tab_bar_item.dart';
 
 class BusinessCardScreen extends StatefulWidget {
   const BusinessCardScreen({

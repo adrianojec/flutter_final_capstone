@@ -20,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
             top: 5.0,
             right: 5.0,
           ),
@@ -31,13 +31,13 @@ class CustomAppBar extends StatelessWidget {
         ),
         Column(
           children: [
-            RobotoTextHeadlineTwo(
+            const RobotoTextHeadlineTwo(
               text: donnerstag,
               fontSize: 22,
             ),
             Row(
               children: [
-                ClippedContainer(text: offen),
+                const ClippedContainer(text: offen),
                 RobotoTextBodyOne(text: currentDate),
               ],
             ),
@@ -59,7 +59,7 @@ class CustomAppBar extends StatelessWidget {
         ),
         const HorizontalSpace(widthPercentage: 3),
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: lightGreyTextColor,
           ),

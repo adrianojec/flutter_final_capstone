@@ -15,8 +15,4 @@ class SideDrawerData {
     zeiterfassung,
     meineEinsatze,
   ];
-
-  static final routes = [
-
-  ];
 }

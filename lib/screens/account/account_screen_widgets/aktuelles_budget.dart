@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:final_capstone/utilities/constants/colors_constant.dart';
-import 'package:final_capstone/utilities/constants/strings_constant.dart';
-import 'package:final_capstone/widgets/text/roboto_text_body_one.dart';
-import 'package:final_capstone/widgets/text/roboto_text_headline_two.dart';
+import 'package:final_capstone/utilities/constants/constants.dart';
+import 'package:final_capstone/widgets/text/text.dart';
 
 
 class AktuellesBudget extends StatelessWidget {
